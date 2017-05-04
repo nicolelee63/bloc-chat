@@ -12,5 +12,5 @@
 
     angular
         .module('bloc-chat')
-        .controller('HomeCtrl', ['Room','$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
 })();
