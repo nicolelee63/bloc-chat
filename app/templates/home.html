@@ -1,4 +1,4 @@
-<div class="room-nav">
+<div class="side-bar">
   <h1>BLOC CHAT</h1>
   <div class="button-wrapper">
     <span class="new-room-button" type="button" ng-click="home.addRoom()" style="cursor:pointer"><p>+ &nbsp;New Room</p></span>
@@ -9,6 +9,7 @@
       <h3 class="room-name" ng-click="home.setCurrentRoom(room)" style="cursor:pointer">{{ room.$value }}</h3>
     </div>
   </div>
+</div>
 
   <div class="messages">
        <div class="messages-header">
@@ -17,7 +18,12 @@
 
       <div class="messages-body" ng-repeat="message in home.messages">
         <div class="username">{{ message.username }} </div>
-        <div class="timestamp">{{ message.sentAt }} </div>
+        <div class="timestamp">{{ message.sentAt | date : "shortTime"}} </div>
         <div class="user-message">{{ message.content }} </div>
+      </div>
+      <hr class="send-message-hr">
+      <div class="message-field">
+        <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="home.newMessage.content">
+        <button class="btn-new-message" type="button" ng-click="home.sendMessage()">SEND</button>
       </div>
 </div>

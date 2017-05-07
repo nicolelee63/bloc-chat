@@ -4,9 +4,10 @@
   </div>
   <div class="modal-body">
     <h5 class="modal-prompt">Enter a username</h5>
-      <input type="text" name="input" ng-model="modal.username" required>
+      <input class="username-input" type="text" name="input" ng-model="modal.username" required >
+    <p>*Username must be less than 12 characters in length</p>
   </div>
   <div class="modal-footer">
-    <button class="btn-new" type="button" ng-click="modal.createUsername()" ng-disabled="modal.username == null">Create user</button>
+    <button class="btn-new" type="button" ng-click="modal.createUsername()" ng-disabled="modal.username == null">Go</button>
   </div>
 </section>
