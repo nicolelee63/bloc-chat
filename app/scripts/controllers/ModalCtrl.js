@@ -6,12 +6,17 @@
     };
 
     modal.createRoom = function () {
-      Room.add(this.newRoom);
+      Room.add(modal.newRoom);
       $uibModalInstance.close();
     };
+
+    modal.createUsername = function() {
+      $cookies.put('blocChatCurrentUser', modal.username);
+      $uibModalInstance.close();
+    }
   }
 
   angular
     .module('bloc-chat')
-    .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+    .controller('ModalCtrl', ['Room', '$uibModalInstance','$cookies', ModalCtrl]);
 })();
