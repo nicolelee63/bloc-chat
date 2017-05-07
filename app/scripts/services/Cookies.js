@@ -6,7 +6,7 @@
         templateUrl:'/templates/login.html',
         size:'sm',
         controller:'ModalCtrl as modal',
-        keyboard: false;
+        keyboard: false,
         backdrop:'static'
     });
   }
