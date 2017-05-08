@@ -11,8 +11,8 @@
          }
 
          Message.send = function(newMessage) {
-           messages.$add(newMessage);
            newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
+           messages.$add(newMessage);
          }
 
          return Message;

@@ -9,6 +9,7 @@
 
     Room.add = function(room) {
         rooms.$add(room);
+        console.log(room);
     };
 
     return Room;
