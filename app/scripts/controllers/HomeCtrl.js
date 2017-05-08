@@ -1,5 +1,11 @@
 (function() {
     function HomeCtrl(Room, Message, $uibModal, $cookies) {
+      this.scrollBottom = function () {
+            var element = document.getElementById("chatwin");
+            var height = element.scrollHeight;
+            element.scrollTop = height - element.clientHeight;
+        };
+
       var home = this;
       this.rooms = Room.all;
       home.currentRoom = null;
@@ -7,9 +13,9 @@
 
       home.addRoom = function() {
         $uibModal.open({
-          templateUrl:'/templates/modal.html',
+          templateUrl:'/templates/createRoom.html',
           size:'sm',
-          controller:'ModalCtrl as modal'
+          controller:'CreateRoomCtrl as modal'
         });
       }
 
@@ -24,6 +30,11 @@
         Message.send(home.newMessage);
         home.newMessage.content = null;
         }
+
+      home.Logout = function (){
+        $cookies.remove('blocChatCurrentUser');
+        window.location.reload();
+      }
     }
 
     angular

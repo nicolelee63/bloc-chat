@@ -16,17 +16,10 @@ body{
     margin-bottom:1em;
 }
 
-.mobile-only{
-  display:none;
-}
-.navigation{
-  display:none;
-}
-
 /* Side bar */
 
 .side-bar {
-  background-color: black;
+  background-color: white;
   float:left;
   position: fixed;
   width: 20%;
@@ -39,26 +32,26 @@ body{
 .side-bar h1{
   font-size:1.5em;
   letter-spacing: 0.3em;
-  color:white;
-  font-weight:300;
+  color:#355C7D;
+  font-weight:400;
   background-color:transparent;
   display:block;
-  padding:3rem 1rem 3rem 1rem;
-  margin: 0 0 1rem 0;
-  text-align:center;
+  padding:3rem 1rem 3rem 1.5rem;
+  margin: 0;
+  text-align:left;
   box-sizing:border-box;
   width:100%;
 }
 
 .side-bar h3{
-  width:90%;
+  width:85%;
   font-weight:300;
   font-size:1.2em;
   display:inline-block;
   float:left;
-  margin:1rem 0 0.5rem 1rem;
+  margin:1rem 0 0.5rem 1.5rem;
   background-color:transparent;
-  color:white;
+  color:#355C7D;
 }
 
 /* New Room Button */
@@ -66,6 +59,7 @@ body{
   width:100%;
   display:block;
   height:2.5rem;
+
 }
 .new-room-button{
   background-color:transparent;
@@ -73,7 +67,7 @@ body{
   height:2.5em;
   width:70%;
   display:inline;
-  margin-left:1rem;
+  margin-left:0.5rem;
   margin-right:1rem;
   float:left;
   vertical-align: middle;
@@ -82,7 +76,7 @@ body{
 .new-room-button p{
   display:inline-block;
   zoom:1;
-  color:white;
+  color:#355C7D;
   font-weight:300;
   font-size:1.22em;
   vertical-align:middle;
@@ -92,8 +86,61 @@ body{
 }
 
 .new-room-button p:hover{
+  color: #F67280;
   text-decoration:underline;
 }
+
+/* Logout Button */
+
+.logout{
+  width:100%;
+  display:block;
+  height:2.5rem;
+  margin-left:0.5rem;
+}
+
+.logout p{
+  display:inline-block;
+  zoom:1;
+  color:#355C7D;
+  font-weight:300;
+  font-size:1.22em;
+  vertical-align:middle;
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin-bottom: 0;
+  margin-top:1rem;
+  width:100%;
+}
+
+.logout p:hover{
+  color:#F67280;
+}
+
+.btn-logoutChat{
+  float:right;
+  border-style:none;
+  width:50%;
+  background-color:transparent;
+  color:#355C7D;
+}
+
+.btn-logoutChat:hover{
+  color:#F67280;
+}
+
+.btn-cancel{
+  display:inline-block;
+  float:left;
+  border-style:none;
+  width:50%;
+  background: transparent;
+  outline:none;
+}
+
+.btn-cancel:hover{
+  color:#F67280;
+}
+
 
 /* List of Rooms */
 .room-wrapper{
@@ -106,7 +153,7 @@ body{
 
 .room-icon {
   display:inline-block;
-  border:0.5px solid white;
+  border:0.5px solid #355C7D;
   background-color:transparent;
   border-radius:50%;
   width: 1rem;
@@ -177,7 +224,7 @@ body{
 .message-box{
   width:85%;
   margin-left: 3rem;
-  margin-right: 3rem;
+  margin-right: 1rem;
   margin-bottom:3rem;
   border-top: 0px;
   border-left: 0px;
@@ -219,31 +266,34 @@ body{
   font-size:1.2rem;
   font-weight:300;
   letter-spacing: 0.5rem;
+  margin-left:0rem;
   outline:none;
   background:transparent;
   color:white;
   border:none;
-}
-
-.btn-new-message:hover{
-  border-bottom: 1px solid white;
+  padding-left: 0rem;
 }
 
 /* Login page*/
 
 .modal-title{
+  color:#355C7D;
   font-weight:300;
   text-align: center;
 }
 
 .modal-prompt{
+  color:#355C7D;
   text-align:center;
 }
 
 .modal-body p{
+  color:#355C7D;
   font-style:italic;
   font-size:1rem;
   margin:1rem 1rem 0 1rem;
+  text-align:center;
+  background-color:white;
 }
 
 .username-input{
@@ -251,19 +301,24 @@ body{
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #355C7D;
   width:90%;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
 .modal-footer .login{
+  background-color:white;
   border-style:none;
   font-weight:300;
   font-size:1.5rem;
   cursor:pointer;
   width:100%;
-  background-color:transparent;
+  color:#355C7D
+}
+
+.modal-footer .login:hover{
+  color:#F67280;
 }
 
 /* Create new room modal */
@@ -272,7 +327,7 @@ body{
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #355C7D;
   width:90%;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -284,10 +339,11 @@ body{
   border-style:none;
   width:50%;
   background-color:transparent;
+  color:#355C7D
 }
 
 .btn-new-room:hover{
-  text-decoration:underline;
+  color:#F67280;
 }
 
 .btn-cancel{
@@ -295,10 +351,11 @@ body{
   border-style:none;
   width:50%;
   background: transparent;
+  color:#355C7D;
 }
 
 .btn-cancel:hover{
-  text-decoration: underline;
+  color:#F67280;
 }
 
 /* Large Devices, Wide Screens */

@@ -9,6 +9,9 @@
       <h3 class="room-name" ng-click="home.setCurrentRoom(room)" style="cursor:pointer">{{ room.name }}</h3>
     </div>
   </div>
+  <div class="logout">
+    <span class="btn-logout" type="button" ng-click="home.Logout()"style="cursor:pointer"><p>< &nbsp;Logout</p></span>
+  </div>
 </div>
 
   <div class="messages">
@@ -24,6 +27,6 @@
       <hr class="send-message-hr">
       <div class="message-field">
           <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="home.newMessage.content">
-        <button class="btn-new-message" type="button" ng-click="home.sendMessage()">SEND</button>
+        <button class="btn-new-message" type="submit" ng-click="home.sendMessage()">SEND</button>
       </div>
 </div>
