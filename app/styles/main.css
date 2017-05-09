@@ -149,7 +149,7 @@ body{
 /*                      Messages                       */
 .messages {
   position: absolute;
-  top: 1rem;
+  top: 2rem;
   left:27rem;
   float:right;
   width:78%;
@@ -193,6 +193,10 @@ body{
   padding-left:0.5rem;
   float:right;
   color:white;
+}
+
+.user-message {
+  width:80%;
 }
 
 .messages-body .username .timestamp{
@@ -464,6 +468,7 @@ body{
 @media (max-width: 767px) {
 
   .messages-header h3{
+    margin-top:2rem;
     margin-left:3rem;
     font-weight:400;
     display:inline-block;
