@@ -37,8 +37,9 @@
       <div class="messages-body" ng-repeat="message in home.messages" id="message-window" scroll-glue>
         <div class="username">{{ message.username }} </div>
         <div class="timestamp">{{ message.sentAt | date : "MMM-dd h:mma"}} </div>
-        <div class="user-message">{{ message.content }} </div>
+        <div class="user-message"><p>{{ message.content }}</p> </div>
       </div>
+      
       <hr class="send-message-hr">
       <form ng-submit="sendMessage()" class="message-field">
           <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-keyup="($event.charCode==13)? sendMessage(currentRoom) : return" ng-change="scrollBottom()" ng-model="home.newMessage.content" minlength="1" autocomplete="off">

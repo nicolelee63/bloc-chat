@@ -91,7 +91,6 @@ body{
 
 .new-room-button p:hover{
   color: #F67280;
-  text-decoration:underline;
 }
 
 .new-room-button-mobile{
@@ -118,6 +117,10 @@ body{
   margin-bottom: 0;
   margin-top:1rem;
   width:100%;
+}
+
+.logout p:hover{
+  color:#F67280;
 }
 
 .btn-logout-mobile{
@@ -160,12 +163,14 @@ body{
 }
 
 .messages-body{
-  padding-left:3rem;
-  padding-right:3rem;
+  padding-left:1rem;
+  padding-right:1rem;
   padding-top:1rem;
   padding-bottom:1rem;
-  background:transparent;
-  width:100%;
+  margin:1rem;
+  background: rgba(255,255,255,0.4);
+  border-radius:15px;
+  width:auto;
 }
 
 .messages-header h3{
@@ -210,10 +215,11 @@ body{
   display:inline-block;
 }
 
-.messages-body .user-message{
+.messages-body .user-message p{
   font-weight:300;
   font-size:1.8rem;
   color:white;
+  border-style:1px solid white;
 }
 
 .message-box{
@@ -416,14 +422,13 @@ body{
 }
 
 @media (max-width: 782px) {
-  .room-icon {
-    display:none;
-  }
-
   .side-bar h3{
     font-size:1em;
     margin-left: 0.5rem;
+    margin-top:1.5rem;
     padding-left:0rem;
+    display:block;
+    width:100%;
   }
 
   .messages{
@@ -443,13 +448,25 @@ body{
     margin-left: 10px;
   }
 
-  .btn-logout-mobile{
-    display:inline-block;
+  .new-room-button-mobile{
+    display:block;
     zoom:1;
     color:#355C7D;
     font-weight:300;
-    font-size:1em;
-    margin-bottom: 0;
+    margin-left:2rem;
+    margin-top:2rem;
+    margin-bottom:2rem;
+    font-size:1.5em;
+    width:100%;
+  }
+
+  .btn-logout-mobile{
+    display:block;
+    zoom:1;
+    color:#355C7D;
+    font-weight:300;
+    font-size:1.5em;
+    margin-bottom: 1rem;
     margin:left:10px;
     margin-top:0rem;
     width:100%;
@@ -459,24 +476,21 @@ body{
     display:none;
   }
 
-  .new-room-button-mobile{
-    display:inline-block;
-    zoom:1;
-    color:#355C7D;
-    font-weight:300;
-    font-size:1.22em;
-    vertical-align:middle;
-    padding: 1rem 0 0.5rem 1rem;
-    margin-left:1rem;
-    width:100%;
+  .room-wrapper{
+    display:block;
   }
 }
 
 @media (max-width: 767px) {
 
+  .message-box{
+    margin-left:2rem;
+    width:94%;
+  }
+
   .messages-header h3{
     margin-top:2rem;
-    margin-left:3rem;
+    margin-left:1.8rem;
     font-weight:400;
     display:inline-block;
     width:100%;
@@ -547,17 +561,34 @@ body{
 
   .messages{
     display:block;
-    width:100%;
-    margin-left:0rem;
-    margin-right:1rem;
+    width:90%;
+    margin-left:2rem;
+    margin-right:2rem;
     top:5rem;
     left:0;
     right:0;
   }
 
-  .message-box{
-    width: 93%;
-    margin-left:2rem;
+  .messages-body .username{
+    font-weight:400;
+    font-size:1.7rem;
+    color:white;
+    height:2rem;
+    float:left;
+    width:50%;
+  }
+
+  .messages-body .timestamp{
+    font-weight:300;
+    font-style:italic;
+    font-size:1rem;
+    padding-left:0.5rem;
+    height:1.5rem;
+    margin-top: 0.5rem;
+    float:right;
+    text-align:right;
+    width:50%;
+    color:white;
   }
 
   .btn-logout{
@@ -606,6 +637,29 @@ body{
     background-color: transparent;
   }
 
+  .user-message p{
+    font-size:1.5rem;
+  }
+
+  .messages-body{
+    margin-left:2rem;
+  }
+
+  .messages{
+    display:block;
+    width:90%;
+    margin-left:2rem;
+    margin-right:1rem;
+    top:5rem;
+    left:0;
+    right:0;
+  }
+
+  .message-box{
+    width: 93%;
+    margin-left:2rem;
+  }
+
   #left{
     float:left;
     width: 50%;
@@ -638,20 +692,5 @@ body{
     height: 3px;
     background-color:white;
     margin: 6px 0;
-  }
-
-  .messages{
-    display:block;
-    width:100%;
-    margin-left:0rem;
-    margin-right:1rem;
-    top:5rem;
-    left:0;
-    right:0;
-  }
-
-  .message-box{
-    width: 93%;
-    margin-left:1rem;
   }
 }
