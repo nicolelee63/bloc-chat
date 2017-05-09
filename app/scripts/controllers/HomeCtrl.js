@@ -1,15 +1,19 @@
 (function() {
     function HomeCtrl(Room, Message, $uibModal, $cookies) {
+            var home = this;
+
       this.scrollBottom = function () {
-            var element = document.getElementById("chatwin");
+            var element = document.getElementById("message-window");
             var height = element.scrollHeight;
             element.scrollTop = height - element.clientHeight;
         };
 
-      var home = this;
+      this.messages = {};
       this.rooms = Room.all;
       home.currentRoom = null;
       home.currentUser = $cookies.get('blocChatCurrentUser');
+
+      this.glued = true;
 
       home.addRoom = function() {
         $uibModal.open({
@@ -17,6 +21,18 @@
           size:'sm',
           controller:'CreateRoomCtrl as modal'
         });
+      }
+
+      home.mobileMenu = function(){
+        $uibModal.open({
+          templateUrl:'/templates/mobileMenu.html',
+          size:'lg',
+          controller:'MobileMenuCtrl as modal'
+        });
+      }
+
+      home.closeModal = function(){
+        $uibModalInstance.close();
       }
 
       home.setCurrentRoom = function (room) {

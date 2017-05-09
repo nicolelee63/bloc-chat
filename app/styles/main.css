@@ -16,7 +16,11 @@ body{
     margin-bottom:1em;
 }
 
-/* Side bar */
+.mobile-menu{
+  display:none;
+}
+
+/*                      Side bar                       */
 
 .side-bar {
   background-color: white;
@@ -30,8 +34,8 @@ body{
 }
 
 .side-bar h1{
-  font-size:1.5em;
-  letter-spacing: 0.3em;
+  font-size:3em;
+  font-family: 'Lobster', cursive;
   color:#355C7D;
   font-weight:400;
   background-color:transparent;
@@ -43,7 +47,7 @@ body{
   width:100%;
 }
 
-.side-bar h3{
+.signed-in-user h3{
   width:85%;
   font-weight:300;
   font-size:1.2em;
@@ -54,7 +58,7 @@ body{
   color:#355C7D;
 }
 
-/* New Room Button */
+/*                    New Room Button                      */
 .button-wrapper{
   width:100%;
   display:block;
@@ -90,7 +94,11 @@ body{
   text-decoration:underline;
 }
 
-/* Logout Button */
+.new-room-button-mobile{
+  display:none;
+}
+
+/*                      Logout Button                       */
 
 .logout{
   width:100%;
@@ -112,37 +120,11 @@ body{
   width:100%;
 }
 
-.logout p:hover{
-  color:#F67280;
+.btn-logout-mobile{
+  display:none;
 }
 
-.btn-logoutChat{
-  float:right;
-  border-style:none;
-  width:50%;
-  background-color:transparent;
-  color:#355C7D;
-}
-
-.btn-logoutChat:hover{
-  color:#F67280;
-}
-
-.btn-cancel{
-  display:inline-block;
-  float:left;
-  border-style:none;
-  width:50%;
-  background: transparent;
-  outline:none;
-}
-
-.btn-cancel:hover{
-  color:#F67280;
-}
-
-
-/* List of Rooms */
+/*                      List of Rooms                       */
 .room-wrapper{
   padding:1rem;
   vertical-align: middle;
@@ -151,18 +133,20 @@ body{
   background-color:transparent;
 }
 
-.room-icon {
+.room-wrapper h3{
+  width:85%;
+  font-weight:300;
+  font-size:1.2em;
   display:inline-block;
-  border:0.5px solid #355C7D;
-  background-color:transparent;
-  border-radius:50%;
-  width: 1rem;
-  height: 1rem;
-  margin:1.5rem 0 0.5rem 0;
   float:left;
+  margin:1rem 0 0.5rem 1.5rem;
+  background-color:transparent;
+  color:#355C7D;
+  text-transform: capitalize;
+  font-style:italic;
 }
 
-/* Messages */
+/*                      Messages                       */
 .messages {
   position: absolute;
   top: 1rem;
@@ -172,7 +156,6 @@ body{
   height:100%;
   z-index: 1;
   overflow: scroll;
-  /*margin-left: 2rem;*/
   border-style: none;
 }
 
@@ -191,6 +174,7 @@ body{
   display:inline-block;
   width:80%;
   color:white;
+  text-transform: capitalize;
   background-color: none;
   text-align:left;
   text-decoration: underline;
@@ -240,7 +224,7 @@ body{
   width:94%;
 }
 
-/* Message Box Placeholder Styling */
+/*                      Message Box Placeholder Styling                       */
 ::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
   color:white;
   font-weight: 300;
@@ -261,7 +245,13 @@ body{
   font-weight: 300;
 }
 
-/* Message Box Send Button */
+/*                      Message Field Input Styling                       */
+.message-field input[type=text]{
+  color:white;
+  font-weight:300;
+}
+
+/*                      Message Box Send Button                      */
 .btn-new-message{
   font-size:1.2rem;
   font-weight:300;
@@ -274,12 +264,39 @@ body{
   padding-left: 0rem;
 }
 
-/* Login page*/
+/*                      Login page                      */
 
 .modal-title{
   color:#355C7D;
-  font-weight:300;
+  font-weight:400;
   text-align: center;
+}
+
+.auth-entry .label-name{
+  color:#355C7D;
+  width:100%;
+  text-align:center;
+  font-weight:300;
+}
+
+.auth-entry input[type=email]{
+  color:#355C7D;
+}
+
+.auth-entry input[type=password]{
+  color:#355C7D;
+}
+
+.auth-entry .input-field {
+  outline:none;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  border-bottom:1px solid #355C7D;
+  margin-left:3rem;
+  margin-right:3rem;
+  margin-bottom:2rem;
+  width:80%;
 }
 
 .modal-prompt{
@@ -287,41 +304,36 @@ body{
   text-align:center;
 }
 
-.modal-body p{
-  color:#355C7D;
-  font-style:italic;
-  font-size:1rem;
-  margin:1rem 1rem 0 1rem;
-  text-align:center;
-  background-color:white;
-}
-
-.username-input{
-  outline:none;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom: 1px solid #355C7D;
-  width:90%;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.modal-footer .login{
-  background-color:white;
+.modal-footer .user-login{
+  float:right;
+  width:50%;
+  background:transparent;
   border-style:none;
-  font-weight:300;
-  font-size:1.5rem;
-  cursor:pointer;
-  width:100%;
-  color:#355C7D
+  color:#355C7D;
 }
 
-.modal-footer .login:hover{
+.modal-footer .user-create{
+  float:left;
+  width:50%;
+  background:transparent;
+  border-style:none;
+  color:#355C7D;
+}
+
+.modal-footer .user-login:hover, .modal-footer .user-create:hover, .modal-footer .user-submit:hover{
   color:#F67280;
 }
 
-/* Create new room modal */
+.modal-footer .user-submit{
+  float:right;
+  width:100%;
+  background:transparent;
+  border-style:none;
+  color:#355C7D;
+}
+
+
+/*                        Create new room modal                        */
 .room-name-input{
   outline:none;
   border-top: 0px;
@@ -358,86 +370,277 @@ body{
   color:#F67280;
 }
 
-/* Large Devices, Wide Screens */
-	@media only screen and (max-width : 1200px){
+/*                      Media Queries                     */
 
+@media (max-width: 1038px) {
+  .messages{
+    left:22rem;
+  }
+}
+
+@media (max-width: 983px) {
+  .messages{
+    left:20rem;
   }
 
-	/* Medium Devices, Desktops */
-	@media only screen and (max-width : 851px){
+  .side-bar h3{
+    width:80%;
+  }
+}
 
-	}
+@media (max-width: 875px) {
+  .messages{
+    left:18rem;
+  }
+}
 
-	/* Small Devices, Tablets */
-	@media only screen and (max-width : 768px){
+@media (max-width: 858px) {
+  .messages{
+    left:18rem;
   }
 
-	/* Extra Small Devices, Phones */
-	@media only screen and (max-width : 480px){
+  .message-box{
+    width: 80%;
+  }
+}
 
-	}
+@media (max-width: 782px) {
+  .room-icon {
+    display:none;
+  }
 
-	/* Custom, iPhone Retina */
-	@media only screen and (max-width : 320px){
-    .side-bar{
-      display:none;
-    }
-    .messages{
-      margin:0rem;
-      left:0rem;
-      right:0rem;
-      position:relative;
-      float:left;
-      width:100%;
+  .side-bar h3{
+    font-size:1em;
+    margin-left: 0.5rem;
+    padding-left:0rem;
+  }
 
-    }
+  .messages{
+    left:16rem;
+  }
 
-    .message-box{
-      width:95%;
-      margin-left:1rem;
-      margin-bottom:1rem;
-      margin-right:1rem;
+  .message-box{
+    width: 80%;
+  }
 
-    }
+  .btn-logout{
+    display:none;
+  }
 
-    .btn-new-message{
-      width:100%;
-      margin:0;
-      font-size:2rem;
-    }
+  .logout{
+    padding-left:0rem;
+    margin-left: 10px;
+  }
 
-    .btn-new-message:hover{
-      border-style:none;
-    }
+  .btn-logout-mobile{
+    display:inline-block;
+    zoom:1;
+    color:#355C7D;
+    font-weight:300;
+    font-size:1em;
+    margin-bottom: 0;
+    margin:left:10px;
+    margin-top:0rem;
+    width:100%;
+  }
 
-    .send-message-hr{
-      display:none;
-    }
+  .new-room-button{
+    display:none;
+  }
 
-    ::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
-      color:white;
-      font-weight: 300;
-      font-size:1.5rem;
-    }
+  .new-room-button-mobile{
+    display:inline-block;
+    zoom:1;
+    color:#355C7D;
+    font-weight:300;
+    font-size:1.22em;
+    vertical-align:middle;
+    padding: 1rem 0 0.5rem 1rem;
+    margin-left:1rem;
+    width:100%;
+  }
+}
 
-    ::-moz-placeholder{ /* Firefox 19+ */
-      color:white;
-      font-weight: 300;
-      font-size:1.5rem;
-    }
+@media (max-width: 767px) {
 
-    :-ms-input-placeholder{ /* IE 10+ */
-      color:white;
-      font-weight: 300;
-      font-size:1.5rem;
-    }
+  .messages-header h3{
+    margin-left:3rem;
+    font-weight:400;
+    display:inline-block;
+    width:100%;
+    color:white;
+    text-transform: capitalize;
+    background-color: none;
+    text-align:left;
+    text-decoration: underline;
+  }
 
-    :-moz-placeholder{/* Firefox 18- */
-      color:white;
-      font-weight: 300;
-      font-size:1.5rem;
-    }
+  .mobile-navbar{
+    width:100%;
+    height:8rem;
+    display:block;
+    background-color: transparent;
+  }
 
+  #left{
+    float:left;
+    width: 50%;
+    background-color: transparent;
+    text-align:left;
+    padding-left:3rem;
+    height:100%;
+    font-family: 'Lobster', cursive;
+    font-size:4rem;
+    padding-top:1.5rem;
+    color:white;
+  }
 
+  #right{
+    float:right;
+    width:50%;
+    background-color: transparent;
+    height:100%;
+  }
 
-	}
+  .icon-wrapper{
+    float:right;
+    padding-right:3rem;
+    padding-top:2rem;
+    padding-bottom:2rem;
+  }
+
+  .icon-bar{
+    width: 35px;
+    height: 3px;
+    background-color:white;
+    margin: 8px 0;
+  }
+
+  .btn-new-message{
+    display:none;
+  }
+
+  .room-icon {
+    display:none;
+  }
+
+  .side-bar h3{
+    font-size:1em;
+    margin-left: 0.5rem;
+    padding-left:0rem;
+  }
+
+  .side-bar{
+    display:none;
+  }
+
+  .messages{
+    display:block;
+    width:100%;
+    margin-left:0rem;
+    margin-right:1rem;
+    top:5rem;
+    left:0;
+    right:0;
+  }
+
+  .message-box{
+    width: 93%;
+    margin-left:2rem;
+  }
+
+  .btn-logout{
+    display:none;
+  }
+
+  .logout{
+    padding-left:0rem;
+    margin-left: 10px;
+  }
+
+  .btn-logout-mobile{
+    display:inline-block;
+    zoom:1;
+    color:#355C7D;
+    font-weight:300;
+    font-size:1em;
+    margin-bottom: 0;
+    margin:left:10px;
+    margin-top:0rem;
+    width:100%;
+  }
+
+  .new-room-button{
+    display:none;
+  }
+
+  .new-room-button-mobile{
+    display:inline-block;
+    zoom:1;
+    color:#355C7D;
+    font-weight:300;
+    font-size:1.22em;
+    vertical-align:middle;
+    padding: 1rem 0 0.5rem 1rem;
+    margin-left:1rem;
+    width:100%;
+  }
+}
+
+@media (max-width: 356px) {
+  .mobile-navbar{
+    width:100%;
+    height:8rem;
+    display:block;
+    background-color: transparent;
+  }
+
+  #left{
+    float:left;
+    width: 50%;
+    background-color: transparent;
+    text-align:left;
+    padding-left:3rem;
+    height:100%;
+    font-family: 'Lobster', cursive;
+    font-size:3rem;
+    padding-top:1.5rem;
+    color:white;
+  }
+
+  #right{
+    float:right;
+    width:50%;
+    background-color: transparent;
+    height:100%;
+  }
+
+  .icon-wrapper{
+    float:right;
+    padding-right:3rem;
+    padding-top:2rem;
+    padding-bottom:2rem;
+  }
+
+  .icon-bar{
+    width: 28px;
+    height: 3px;
+    background-color:white;
+    margin: 6px 0;
+  }
+
+  .messages{
+    display:block;
+    width:100%;
+    margin-left:0rem;
+    margin-right:1rem;
+    top:5rem;
+    left:0;
+    right:0;
+  }
+
+  .message-box{
+    width: 93%;
+    margin-left:1rem;
+  }
+}

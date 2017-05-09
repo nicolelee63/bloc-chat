@@ -1,0 +1,35 @@
+<section class="modal-box">
+  <div class="modal-header">
+    <span class="close" ng-click="menu.closeWindow()" style="cursor:pointer">&times;</span>
+    <h3 class="modal-title">Menu</h3>
+  </div>
+  <div class="modal-body">
+    <div class="button-wrapper">
+      <span class="mobile-nav-new-room-btn" type="button" ng-click="home.addRoom()" style="cursor:pointer"><p>New Room</p></span>
+    </div>
+    <div ng-repeat="room in home.rooms">
+      <div class="room-wrapper">
+        <h3 class="mobile-nav-room-name" ng-click="home.setCurrentRoom(room)" style="cursor:pointer">{{ room.name }}</h3>
+      </div>
+    </div>
+  </div>
+    <div class="modal-footer">
+          <button class="mobile-nav-logout" type="button" ng-click="home.Logout()">Logout</button>
+    </div>
+</section>
+<style>
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+</style>

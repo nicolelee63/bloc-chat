@@ -1,16 +1,31 @@
+<div class="mobile-navbar">
+  <div id="left">Bloc Chat</div>
+  <div id="right">
+    <div class="icon-wrapper" style="cursor:pointer" ng-click="home.mobileMenu()">
+      <div class="icon-bar"></div>
+      <div class="icon-bar"></div>
+      <div class="icon-bar"></div>
+    </div>
+  </div>
+</div>
+
 <div class="side-bar">
-  <h1>BLOC CHAT</h1>
+  <h1>Bloc Chat</h1>
+
+  <div class="signed-in-user"> <h3>Signed in as {{ home.currentUser }}<h3></div>
+
   <div class="button-wrapper">
     <span class="new-room-button" type="button" ng-click="home.addRoom()" style="cursor:pointer"><p>+ &nbsp;New Room</p></span>
+    <span class="new-room-button-mobile" type="button" ng-click="home.addRoom()" style="cursor:pointer"><p>New Room</p></span>
   </div>
   <div ng-repeat="room in home.rooms">
     <div class="room-wrapper">
-      <div class="room-icon" style="cursor:pointer"></div>
       <h3 class="room-name" ng-click="home.setCurrentRoom(room)" style="cursor:pointer">{{ room.name }}</h3>
     </div>
   </div>
   <div class="logout">
     <span class="btn-logout" type="button" ng-click="home.Logout()"style="cursor:pointer"><p>< &nbsp;Logout</p></span>
+    <span class="btn-logout-mobile" type="button" ng-click="home.Logout()"style="cursor:pointer"><p>Logout</p></span>
   </div>
 </div>
 
@@ -19,14 +34,14 @@
          <h3>{{ home.currentRoom.name }}</h3>
       </div>
 
-      <div class="messages-body" ng-repeat="message in home.messages">
+      <div class="messages-body" ng-repeat="message in home.messages" id="message-window" scroll-glue>
         <div class="username">{{ message.username }} </div>
         <div class="timestamp">{{ message.sentAt | date : "MMM-dd h:mma"}} </div>
         <div class="user-message">{{ message.content }} </div>
       </div>
       <hr class="send-message-hr">
-      <div class="message-field">
-          <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="home.newMessage.content">
+      <form ng-submit="sendMessage()" class="message-field">
+          <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-keyup="($event.charCode==13)? sendMessage(currentRoom) : return" ng-change="scrollBottom()" ng-model="home.newMessage.content" minlength="1" autocomplete="off">
         <button class="btn-new-message" type="submit" ng-click="home.sendMessage()">SEND</button>
-      </div>
+      </form>
 </div>

@@ -5,21 +5,21 @@
   <div class="modal-body">
     <form name="SignIn">
         <div class="auth-entry">
-            <label class="label-name">Email adddress:</label>
+            <label class="label-name">Email adddress</label>
                 <input class="input-field" type="email" ng-model="user.email" name="email" placeholder="Email" required>
         </div>
         <div class="auth-entry">
-            <label class="label-name">Password: </label>
+            <label class="label-name">Password</label>
             <input class="input-field" type="password" ng-model="user.password" name="password" placeholder="password" ng-keypress="($event.charCode==13)? user.validUser(SignIn.$valid) : return" required>
         </div>
     </form>
   </div>
   <div class="modal-footer">
       <div>
-        <button class="user-submit" type="button" ng-click="user.validUser(SignIn.$valid)">Enter</button>
+        <button class="user-login" type="button" ng-click="user.validUser(SignIn.$valid)">Login</button>
       </div>
       <div>
-        <button class="user-create" type="button" ng-click="user.newAccount()">Create Account</button>
+        <button class="user-create" type="button" ng-click="user.newAccount()">Register</button>
       </div>
   </div>
 </div>
