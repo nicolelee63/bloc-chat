@@ -177,13 +177,15 @@ body{
   text-transform: capitalize;
   background-color: none;
   text-align:left;
-  text-decoration: underline;
 }
 
 .messages-body .username{
   font-weight:400;
-  font-size:1.5rem;
+  font-size:1.7rem;
   color:white;
+  height:2rem;
+  float:left;
+  width:10%;
 }
 
 .messages-body .timestamp{
@@ -191,12 +193,17 @@ body{
   font-style:italic;
   font-size:1rem;
   padding-left:0.5rem;
+  height:1.5rem;
+  margin-top: 0.5rem;
   float:right;
+  width:90%;
   color:white;
 }
 
 .user-message {
-  width:80%;
+  width:100%;
+  display:block;
+  margin-top:1rem;
 }
 
 .messages-body .username .timestamp{
@@ -205,7 +212,7 @@ body{
 
 .messages-body .user-message{
   font-weight:300;
-  font-size:2rem;
+  font-size:1.8rem;
   color:white;
 }
 
@@ -477,7 +484,6 @@ body{
     text-transform: capitalize;
     background-color: none;
     text-align:left;
-    text-decoration: underline;
   }
 
   .mobile-navbar{
