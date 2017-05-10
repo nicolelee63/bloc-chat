@@ -39,10 +39,11 @@
         <div class="timestamp">{{ message.sentAt | date : "MMM-dd h:mma"}} </div>
         <div class="user-message"><p>{{ message.content }}</p> </div>
       </div>
-      
-      <hr class="send-message-hr">
+
+
       <form ng-submit="sendMessage()" class="message-field">
-          <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-keyup="($event.charCode==13)? sendMessage(currentRoom) : return" ng-change="scrollBottom()" ng-model="home.newMessage.content" minlength="1" autocomplete="off">
+        <hr class="send-message-hr">
+          <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-keyup="($event.charCode==13)? sendMessage(currentRoom) : return" ng-change="scrollBottom()" ng-model="home.newMessage.content" autocomplete="off">
         <button class="btn-new-message" type="submit" ng-click="home.sendMessage()">SEND</button>
       </form>
 </div>

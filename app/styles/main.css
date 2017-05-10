@@ -241,6 +241,12 @@ body{
   width:94%;
 }
 
+form {
+  bottom:1rem;
+  position:fixed;
+  width:78%;
+}
+
 /*                      Message Box Placeholder Styling                       */
 ::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
   color:white;
@@ -484,8 +490,14 @@ body{
 @media (max-width: 767px) {
 
   .message-box{
-    margin-left:2rem;
+    margin-left:1.5rem;
     width:94%;
+  }
+
+  form {
+    bottom:1rem;
+    position:fixed;
+    width:90%;
   }
 
   .messages-header h3{
@@ -645,20 +657,27 @@ body{
     margin-left:2rem;
   }
 
+  form {
+    bottom:1rem;
+    position:fixed;
+    width:90%;
+    margin-left:0.5rem;
+  }
+
   .messages{
     display:block;
     width:90%;
-    margin-left:2rem;
+    margin-left:1rem;
     margin-right:1rem;
     top:5rem;
     left:0;
     right:0;
   }
 
-  .message-box{
-    width: 93%;
-    margin-left:2rem;
-  }
+  .send-message-hr{
+  border-top: 1px dashed white;
+  width:95%;
+}
 
   #left{
     float:left;
