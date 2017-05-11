@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
   <ui-view></ui-view>
@@ -67,6 +68,15 @@
   <script src="/scripts/controllers/MobileMenuCtrl.js"></script>
   <script src="/scripts/services/Message.js"></script>
   <script src="/scripts/services/Cookies.js"></script>
+
+  <script>
+  function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
 
 </body>
 </html>

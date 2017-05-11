@@ -1,13 +1,16 @@
 ( function() {
     function MobileMenuCtrl($uibModal, Room, $uibModalInstance, $cookies) {
       var menu = this;
+
       menu.addRoom = function() {
+        console.log("add room");
         $uibModal.open({
           templateUrl:'/templates/createRoom.html',
           size:'sm',
           controller:'CreateRoomCtrl as modal',
           controllerAs: 'new'
         });
+
       }
 
       menu.closeWindow = function(){
