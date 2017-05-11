@@ -32,9 +32,11 @@
       </div>
 
 
-      <form ng-submit="sendMessage()" class="message-field">
+    <div class="message-field">
+      <form ng-submit="sendMessage()">
         <hr class="send-message-hr">
           <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-keyup="($event.charCode==13)? sendMessage(currentRoom) : return" ng-change="scrollBottom()" ng-model="home.newMessage.content" autocomplete="off">
         <button class="btn-new-message" type="submit" ng-click="home.sendMessage()">SEND</button>
       </form>
+    </div>
 </div>

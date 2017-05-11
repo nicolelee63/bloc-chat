@@ -243,10 +243,11 @@ body{
   width:94%;
 }
 
-form {
+form .message-field{
+  margin-left:1.5rem;
   bottom:1rem;
   position:fixed;
-  width:80%;
+  width:90%;
 }
 
 /*                      Message Box Placeholder Styling                       */
@@ -296,29 +297,38 @@ form {
 }
 
 /*                      Login page                      */
-
 .modal-title{
+  display:block;
   color:#355C7D;
   font-weight:400;
   text-align: center;
 }
 
 .auth-entry .label-name{
+  display:block;
   color:#355C7D;
   width:100%;
   text-align:center;
   font-weight:300;
-  font-family: 'Helvetica-Neue';
+  font-family: 'Helvetica Neue';
+  padding:0 auto;
+
 }
 
 .auth-entry input[type=email]{
   color:#355C7D;
   font-family: 'Helvetica Neue';
+  display:block;
+  text-align:center;
+  width:90%;
 }
 
 .auth-entry input[type=password]{
   color:#355C7D;
   font-family: 'Helvetica Neue';
+  display:block;
+  text-align:center;
+  width:90%;
 }
 
 .auth-entry .input-field {
@@ -327,8 +337,8 @@ form {
   border-left:none;
   border-right:none;
   border-bottom:1px solid #355C7D;
-  margin-left:3rem;
-  margin-right:3rem;
+  margin-left:1rem;
+  margin-right:1rem;
   margin-bottom:2rem;
   width:80%;
 }
@@ -380,6 +390,7 @@ form {
   border-right: 0px;
   border-bottom: 1px solid #355C7D;
   font-family: 'Helvetica Neue';
+  font-weight:300;
   width:90%;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -387,12 +398,13 @@ form {
 }
 
 .btn-new-room{
+  font-family: 'Helvetica Neue';
+  font-weight:300;
   float:right;
   border-style:none;
   width:50%;
   background-color:transparent;
   color:#355C7D
-  font-family: 'Helvetica Neue';
 }
 
 .btn-new-room:hover{
@@ -400,6 +412,8 @@ form {
 }
 
 .btn-cancel{
+  font-family: 'Helvetica Neue';
+  font-weight:300;
   float:left;
   border-style:none;
   width:50%;
@@ -427,7 +441,7 @@ form {
     float:left;
   }
 
-  form {
+  .message-field form {
     bottom:1rem;
     position:fixed;
     width:100%;
