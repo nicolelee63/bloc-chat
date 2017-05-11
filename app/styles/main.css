@@ -277,6 +277,7 @@ form .message-field{
 
 /*                      Message Field Input Styling                       */
 .message-field input[type=text]{
+  width:85%;
   color:white;
   font-weight:300;
   font-family: 'Helvetica Neue';
@@ -285,7 +286,7 @@ form .message-field{
 /*                      Message Box Send Button                      */
 .btn-new-message{
   font-family:'Helvetica Neue';
-  font-size:1rem;
+  font-size:0.8rem;
   font-weight:300;
   letter-spacing: 0.5rem;
   margin-left:0rem;
@@ -426,8 +427,28 @@ form .message-field{
 }
 
 /*                      Media Queries                     */
+@media (max-width:1083){
+  .message-field input[type=text]{
+    width:85%;
+    color:white;
+    font-weight:300;
+    font-family: 'Helvetica Neue';
+  }
 
-@media (max-width: 992px) {
+  .btn-new-message{
+    font-family:'Helvetica Neue';
+    font-size:0.4rem;
+    font-weight:300;
+    letter-spacing: 0.5rem;
+    margin-left:0rem;
+    outline:none;
+    background:transparent;
+    color:white;
+    border:none;
+  }
+
+}
+@media (max-width: 993px) {
   .w3-container h1{
     font-size:2.5em;
     font-family: 'Lobster', cursive;
@@ -467,10 +488,11 @@ form .message-field{
   }
 
   .messages{
+    top:6rem;
     left:0rem;
     margin-left:1rem;
     margin-right:1rem;
-    width:500px;
+    width:95%;
   }
 
   .message-box{
