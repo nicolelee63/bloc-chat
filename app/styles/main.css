@@ -509,3 +509,55 @@ form .message-field{
     display:inline-block;
   }
 }
+
+@media (max-width: 767px) {
+  .messages-body .username{
+    font-family:'Helvetica Neue';
+    font-weight:400;
+    font-size:1.2rem;
+    color:white;
+    height:2rem;
+    float:left;
+    width:20%;
+  }
+
+  .messages-body .timestamp{
+    font-family:'Helvetica Neue';
+    font-weight:300;
+    font-style:italic;
+    font-size:0.7rem;
+    padding-left:0.5rem;
+    height:1.5rem;
+    margin-top: 0.5rem;
+    float:right;
+    width:80%;
+    color:white;
+  }
+
+  .messages-body .user-message p{
+    font-weight:300;
+    font-family:'Helvetica Neue';
+    font-size:1.1rem;
+    color:white;
+    border-style:1px solid white;
+  }
+}
+
+@media (max-width: 342px) {
+  .w3-container h1{
+    font-size:2.2em;
+    font-family: 'Lobster', cursive;
+    color:#fff;
+    font-weight:400;
+    background-color:transparent;
+    display:block;
+    padding:0rem 1rem 1rem 0rem;
+    width:100%;
+  }
+
+  .messages-header h3 {
+    font-size:1.6rem;
+  }
+
+
+}
