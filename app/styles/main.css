@@ -492,13 +492,12 @@ form .message-field{
 
   .send-message-hr{
     border-top: 1px dashed white;
-    width:96%;
+    width:95%;
   }
 
   .message-field form {
     bottom:1rem;
     position:fixed;
-    width:96%;
   }
 
   .message-field input[type=text]{
