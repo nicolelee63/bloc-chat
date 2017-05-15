@@ -574,6 +574,24 @@ form .message-field{
     color:white;
     border-style:1px solid white;
   }
+
+  .send-message-hr{
+    border-top: 1px dashed white;
+    width:93%;
+  }
+
+  .message-field form {
+    bottom:1rem;
+    position:fixed;
+    width:95%;
+  }
+
+  .message-field input[type=text]{
+    color:white;
+    font-weight:300;
+    font-family: 'Helvetica Neue';
+    width:93%;
+  }
 }
 
 @media (max-width: 342px) {
