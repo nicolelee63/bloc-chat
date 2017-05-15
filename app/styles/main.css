@@ -109,6 +109,11 @@ body{
   color:#355C7D;
 }
 
+.logout img{
+  height:25px;
+  width:25px;
+}
+
 .logout p{
   display:block;
   zoom:1;
@@ -390,8 +395,8 @@ form .message-field{
 /*                        Create new room modal                        */
 
 .new-room-button img{
-  height:15px;
-  width:15px;
+  height:25px;
+  width:25px;
 }
 .room-name-input{
   outline:none;
