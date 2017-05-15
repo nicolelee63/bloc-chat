@@ -243,6 +243,10 @@ body{
   width:94%;
 }
 
+.message-field{
+  margin-left:1.5rem;
+}
+
 form .message-field{
   margin-left:1.5rem;
   bottom:1rem;
