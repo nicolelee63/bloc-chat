@@ -610,5 +610,27 @@ form .message-field{
     font-size:1.6rem;
   }
 
+  .message-field{
+    margin-left:1rem;
+  }
+
+  .send-message-hr{
+    border-top: 1px dashed white;
+    width:95%;
+  }
+
+  .message-field form {
+    bottom:1rem;
+    position:fixed;
+    width:96%;
+  }
+
+  .message-field input[type=text]{
+    color:white;
+    font-weight:300;
+    font-family: 'Helvetica Neue';
+    width:95%;
+  }
+
 
 }
