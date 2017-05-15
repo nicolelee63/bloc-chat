@@ -90,6 +90,7 @@ body{
   font-weight:300;
   font-size:1.22em;
   width:100%;
+  margin-bottom:2rem;
 }
 
 .new-room-button p:hover{
