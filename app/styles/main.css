@@ -611,7 +611,7 @@ form .message-field{
   }
 
   .message-field{
-    margin-left:1rem;
+    left:1rem;
   }
 
   .send-message-hr{
