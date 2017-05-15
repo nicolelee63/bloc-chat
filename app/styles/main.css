@@ -240,7 +240,7 @@ body{
 
 .send-message-hr{
   border-top: 1px dashed white;
-  width:94%;
+  width:95%;
 }
 
 .message-field{
@@ -251,7 +251,7 @@ form .message-field{
   margin-left:1.5rem;
   bottom:1rem;
   position:fixed;
-  width:90%;
+  width:93%;
 }
 
 /*                      Message Box Placeholder Styling                       */
