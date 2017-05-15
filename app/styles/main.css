@@ -113,6 +113,8 @@ body{
   margin:0rem 0 0.5rem 1rem;
   background-color:transparent;
   color:#355C7D;
+  bottom:2rem;
+  position:fixed;
 }
 
 .logout img{
@@ -152,7 +154,7 @@ body{
   color:#355C7D;
   font-weight:300;
   font-size:1.22em;
-  margin-left:1rem;
+  margin-left:2.5rem;
   margin-top:1rem;
   width:100%;
   text-transform:capitalize;
