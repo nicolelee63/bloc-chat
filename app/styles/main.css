@@ -256,7 +256,7 @@ body{
 
 .send-message-hr{
   border-top: 1px dashed white;
-  width:90%;
+  width:95%;
 }
 
 .message-field{
@@ -273,7 +273,7 @@ form .message-field{
 .message-field form {
   bottom:1rem;
   position:fixed;
-  width:80%;
+  width:83%;
 }
 
 
