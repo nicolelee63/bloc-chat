@@ -32,7 +32,7 @@
       </div>
 
 
-    <div class="message-field">
+    <div class="message-field" scroll-glue="glued">
       <form ng-submit="sendMessage()">
         <hr class="send-message-hr">
           <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-keyup="($event.charCode==13)? sendMessage(currentRoom) : return" ng-change="scrollBottom()" ng-model="home.newMessage.content" autocomplete="off">

@@ -261,6 +261,7 @@ body{
 
 .message-field{
   margin-left:1.5rem;
+  overflow:auto;
 }
 
 form .message-field{
