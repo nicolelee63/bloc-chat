@@ -80,6 +80,7 @@ body{
   background-color:transparent;
   color:#355C7D;
   margin-left:1rem;
+  margin-bottom:1.5rem;
 }
 
 .new-room-button p{
@@ -90,7 +91,7 @@ body{
   font-weight:300;
   font-size:1.22em;
   width:100%;
-  margin-bottom:2rem;
+
 }
 
 .new-room-button p:hover{
@@ -268,6 +269,12 @@ form .message-field{
   position:fixed;
   width:93%;
 }
+
+.message-field form {
+  bottom:1rem;
+  position:fixed;
+}
+
 
 /*                      Message Box Placeholder Styling                       */
 ::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
@@ -483,10 +490,15 @@ form .message-field{
     float:left;
   }
 
+  .send-message-hr{
+    border-top: 1px dashed white;
+    width:96%;
+  }
+
   .message-field form {
     bottom:1rem;
     position:fixed;
-    width:100%;
+    width:96%;
   }
 
   .message-field input[type=text]{
