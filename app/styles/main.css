@@ -498,6 +498,7 @@ form .message-field{
   .message-field form {
     bottom:1rem;
     position:fixed;
+    width:96%;
   }
 
   .message-field input[type=text]{
