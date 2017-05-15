@@ -33,7 +33,7 @@ body{
   top: 0px;
   height: 100%;
   border-style:none;
-  z-index: 3;
+  z-index: 5;
 }
 
 .w3-sidebar h1{
