@@ -4,7 +4,7 @@
 
   <div class="signed-in-user"> <h3>Signed in as {{ home.currentUser }}<h3></div>
 
-  <div class="new-room-button" ng-click="home.addRoom()" style="cursor:pointer"><p>+ &nbsp;New Room</p></div>
+  <div class="new-room-button" ng-click="home.addRoom()" style="cursor:pointer"><p><img src="styles/new-room-icon.png">New Room</p></div>
 
   <div class="room-name" ng-repeat="room in home.rooms" ng-click="home.setCurrentRoom(room)" style="cursor:pointer">
       <h3 >{{ room.name }}</h3>

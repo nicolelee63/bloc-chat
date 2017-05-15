@@ -240,7 +240,7 @@ body{
 
 .send-message-hr{
   border-top: 1px dashed white;
-  width:95%;
+  width:98%;
 }
 
 .message-field{
@@ -388,6 +388,11 @@ form .message-field{
 
 
 /*                        Create new room modal                        */
+
+.new-room-button img{
+  height:15px;
+  width:15px;
+}
 .room-name-input{
   outline:none;
   border-top: 0px;
